@@ -349,6 +349,17 @@ figure {
     margin: 0;
 }
 
+/* Define the CSS class for cell highlighting */
+.highlighted {
+    background-color: rgb(109, 221, 109); /* Customize the highlighting style as needed */
+    color: white; /* Set the text color to white */
+    cursor: pointer; /* Set cursor to pointer for interactivity */
+}
+
+#activities table td:not(#unselectable){
+    cursor: pointer;
+}
+
 /* clock */
 #timeofday{
     font-family: Arial, Helvetica, sans-serif;

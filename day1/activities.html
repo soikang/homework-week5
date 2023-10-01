@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- day2 external style sheet -->
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <!-- wk5d1 hw activities hightlight code jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     </head>  
     <body id="activities">
     <!-- Container to wrap everything -->
@@ -57,7 +60,7 @@
                     <tr>
                         <td>Kayak</td>
                         <td>Western Kayak Meetup</td>
-                        <td>Not Available</td>
+                        <td id="unselectable">Not Available</td>
                         <td>Youth Kayaking</td>
                         <td>Kayak Down</td>
                     </tr>
@@ -65,15 +68,15 @@
                         <td>Skydiving</td>
                         <td>Seacliff Diving</td>
                         <td>Sky is the limit</td>
-                        <td>Not Available</td>
+                        <td id="unselectable">Not Available</td>
                         <td>Sky Diving for Beginners</td>
                     </tr>
                     <tr>
                         <td>Biking</td>
                         <td>Bicycle for One</td>
-                        <td>Not Available</td>
+                        <td id="unselectable">Not Available</td>
                         <td>Bike Meetup Group</td>
-                        <td>Not Available</td>
+                        <td id="unselectable">Not Available</td>
                     </tr>
                     <tr>
                         <td>Camping</td>
@@ -90,24 +93,7 @@
         </main>
         <section>
             <ul id="partners">
-                <!-- <li class="partner">
-                    <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
-                </li>
-                <li class="partner">
-                    <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
-                </li>
-                <li class="partner">
-                    <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
-                </li>
-                <li class="partner">
-                    <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
-                </li>
-                <li class="partner">
-                    <img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
-                </li>
-                <li class="partner">
-                    <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
-                </li> -->
+              <!-- replaced with javascript code -->
             </ul>
         </section>
         <footer>
@@ -135,5 +121,18 @@
     <!-- Partners -->
     <script src="js/site_scripts.js"></script>
     
+    <!-- cliff.html hightlight code -->
+    <script>
+    $(document).ready(function () {
+            // Add a click event handler to all table cells in the tbody
+            $('td').click(function (){
+                 // Check if the cell contains the text "Not Available"
+                if ($(this).text().trim() !== "Not Available") {
+                // Toggle the 'highlighted' class on the clicked cell
+                $(this).toggleClass('highlighted');
+                }
+            });
+        });
+    </script>
     </body>
 </html>
