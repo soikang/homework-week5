@@ -9,11 +9,36 @@
 
 <script>
     $(document).ready(function() {
-       $("#btn").click(function(event){
+      // Fetch data from data.json using AJAX
+      $.getJSON('data.json', function(data) {
+        // Set table title
+        $("#tableTitle").text(data.title);
 
-       });
+        // Set table headers
+        $("#heading").text(data.heading);
+        $("#head1").text(data.head1);
+        $("#head2").text(data.head2);
+        $("#head3").text(data.head3);
+        $("#head4").text(data.head4);
+
+        // Set table data
+        $("#cal1").text(data.cal1);
+        $("#cal2").text(data.cal2);
+        $("#cal3").text(data.cal3);
+        $("#cal4").text(data.cal4);
+
+        $("#fat1").text(data.fat1);
+        $("#fat2").text(data.fat2);
+        $("#fat3").text(data.fat3);
+        $("#fat4").text(data.fat4);
+
+        $("#ven1").text(data.ven1);
+        $("#ven2").text(data.ven2);
+        $("#ven3").text(data.ven3);
+        $("#ven4").text(data.ven4);
+      });
     });
- </script>
+</script>
 </head> 	
 <body>
 
@@ -33,8 +58,8 @@
   <h1>My Second Heading</h1>
   <p>My Second paragraph.</p>
 
-  <table>
-    <!--<caption></caption>
+  <!-- <table>
+    <caption></caption>
     <thead>
         <tr id="showheading">
             <th></th>
@@ -68,8 +93,46 @@
             <td></td>
             <td></td>
         </tr>
-    </tfoot>-->
-    </table>
+    </tfoot>
+  </table> -->
+
+  <table>
+    <caption></caption>
+    <thead>
+        <tr id="showheading">
+            <th id="heading"></th>
+            <th id="head1"></th>
+            <th id="head2"></th>
+            <th id="head3"></th>
+            <th id="head4"></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr id="showcalories">
+            <td>Calories</td>
+            <td id="cal1"></td>
+            <td id="cal2"></td>
+            <td id="cal3"></td>
+            <td id="cal4"></td>
+        </tr>
+        <tr id="showfat">
+            <td>Fat</td>
+            <td id="fat1"></td>
+            <td id="fat2"></td>
+            <td id="fat3"></td>
+            <td id="fat4"></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr id="showven">
+            <td>Vendor</td>
+            <td id="ven1"></td>
+            <td id="ven2"></td>
+            <td id="ven3"></td>
+            <td id="ven4"></td>
+        </tr>
+    </tfoot>
+  </table>
 
     <input type = "button" id = "btn" value = "Load Data" style="margin-top:20px;" />
 </main>
