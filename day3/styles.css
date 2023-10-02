@@ -184,6 +184,46 @@ td:first-child {
     font-weight: bold;
     background: #BDE1FF;
 }
+
+#activities main #displaySelected {
+    visibility: hidden;
+    margin:0 auto;
+    width: 600px;
+    border: 2px solid #9ed034;
+    padding: 0.75em;
+}
+
+#activities main #displaySelected #result, #activities main #displaySelected #sendinfo {
+    display: inline-block;
+    margin: 0;
+}
+
+#activities main #reulst {
+    min-height: 50px;
+    width: 300px;
+    padding: 0;
+}
+
+#activities main #result h4 {
+    margin-bottom: 1em;
+    font-size: 1.15em;
+}
+
+#activities main #displaySelected #sendinfo input[type="email"]{
+    width: 200px;
+}
+
+/* Define the CSS class for cell highlighting */
+.highlighted {
+    background-color: rgb(109, 221, 109); /* Customize the highlighting style as needed */
+    color: white; /* Set the text color to white */
+    cursor: pointer; /* Set cursor to pointer for interactivity */
+}
+
+#activities table td:not(#unselectable){
+    cursor: pointer;
+}
+
 /* Contact - contact.html */
 main {
     font-family: Arial, Helvetica, sans-serif;
@@ -347,17 +387,6 @@ figure {
     width: 100%;
     height: 100%;
     margin: 0;
-}
-
-/* Define the CSS class for cell highlighting */
-.highlighted {
-    background-color: rgb(109, 221, 109); /* Customize the highlighting style as needed */
-    color: white; /* Set the text color to white */
-    cursor: pointer; /* Set cursor to pointer for interactivity */
-}
-
-#activities table td:not(#unselectable){
-    cursor: pointer;
 }
 
 /* clock */
