@@ -9,33 +9,38 @@
 
 <script>
     $(document).ready(function() {
-      // Fetch data from data.json using AJAX
-      $.getJSON('data.json', function(data) {
-        // Set table title
-        $("#tableTitle").text(data.title);
+      $("#btn").click(function(event){
+        // Fetch data from data.json using AJAX
+        $.getJSON('data.json', function(data) {
+            // Set table title
+            $("caption").text(data.title);
 
-        // Set table headers
-        $("#heading").text(data.heading);
-        $("#head1").text(data.head1);
-        $("#head2").text(data.head2);
-        $("#head3").text(data.head3);
-        $("#head4").text(data.head4);
+            // Set table headers
+            $("#heading").text(data.heading);
+            $("#head1").text(data.head1);
+            $("#head2").text(data.head2);
+            $("#head3").text(data.head3);
+            $("#head4").text(data.head4);
 
-        // Set table data
-        $("#cal1").text(data.cal1);
-        $("#cal2").text(data.cal2);
-        $("#cal3").text(data.cal3);
-        $("#cal4").text(data.cal4);
+            // Set table data
+            $("#subheadcal").text(data.subheadcal);
+            $("#cal1").text(data.cal1);
+            $("#cal2").text(data.cal2);
+            $("#cal3").text(data.cal3);
+            $("#cal4").text(data.cal4);
 
-        $("#fat1").text(data.fat1);
-        $("#fat2").text(data.fat2);
-        $("#fat3").text(data.fat3);
-        $("#fat4").text(data.fat4);
+            $("#subheadfat").text(data.subheadfat);
+            $("#fat1").text(data.fat1);
+            $("#fat2").text(data.fat2);
+            $("#fat3").text(data.fat3);
+            $("#fat4").text(data.fat4);
 
-        $("#ven1").text(data.ven1);
-        $("#ven2").text(data.ven2);
-        $("#ven3").text(data.ven3);
-        $("#ven4").text(data.ven4);
+            $("#subheadven").text(data.subheadven);
+            $("#ven1").text(data.ven1);
+            $("#ven2").text(data.ven2);
+            $("#ven3").text(data.ven3);
+            $("#ven4").text(data.ven4);
+        });
       });
     });
 </script>
@@ -109,14 +114,14 @@
     </thead>
     <tbody>
         <tr id="showcalories">
-            <td>Calories</td>
+            <td id="subheadcal"></td>
             <td id="cal1"></td>
             <td id="cal2"></td>
             <td id="cal3"></td>
             <td id="cal4"></td>
         </tr>
         <tr id="showfat">
-            <td>Fat</td>
+            <td id="subheadfat"></td>
             <td id="fat1"></td>
             <td id="fat2"></td>
             <td id="fat3"></td>
@@ -125,7 +130,7 @@
     </tbody>
     <tfoot>
         <tr id="showven">
-            <td>Vendor</td>
+            <td id="subheadven"></td>
             <td id="ven1"></td>
             <td id="ven2"></td>
             <td id="ven3"></td>
